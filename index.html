@@ -648,7 +648,8 @@
                             style="margin-top: 1rem; margin-bottom: 1rem; border: 0; border-top: 2px dashed rgba(0,0,0,.1);">
                         <div style="margin-bottom: 10px">
                             <div style="color: #b2b2b2;">Name</div>
-                            <div>Nama Tamu</div>
+                            <div id="qrGuestName">Nama Tamu</div>
+                            <div id="qrGuestDate" style="color:#b2b2b2;font-size:13px;margin-top:4px;">Wednesday, 9 September 2026</div>
                         </div>
                     </div>
                     <button onclick="closeModal(qrModal)" type="button" class="btn btn-close"><svg
@@ -822,8 +823,8 @@
             if (guestSlot) guestSlot.textContent = guestName;
             var satuMomen = document.getElementById('satuMomen');
             if (satuMomen) satuMomen.setAttribute('data-guest', guestName);
-            var qrName = document.querySelector('#qrModal .text-center div div:last-child');
-            if (qrName && qrName.textContent === 'Nama Tamu') qrName.textContent = guestName;
+            var qrName = document.getElementById('qrGuestName');
+            if (qrName) qrName.textContent = guestName;
             var rsvpNama = document.getElementById('rsvpNama');
             if (rsvpNama) rsvpNama.placeholder = guestName;
         })();
