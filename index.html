@@ -176,7 +176,7 @@
             <div class="satumomen_track">
                 <ul class="satumomen_list">
                     <li class="container-mobile satumomen_slide satumomen_cover"
-                        style="background-image: url(3.jpeg); background-color:#490204; background-size: contain; background-repeat: no-repeat; background-position: center center;">
+                        style="background-image: url(3.jpeg); background-size: cover;">
                         <div class="workspace cover">
                             <div class="content h-100 w-100 mx-auto">
                                 <div class="h-100 d-flex justify-content-between align-items-center flex-column py-4">
@@ -208,7 +208,7 @@
                     </li>
                     <li class="blank-canvas" style="height: 100vh"></li>
                     <li class="container-mobile satumomen_slide"
-                        style="background-image: url(3.jpeg); background-color:#490204; background-size: contain; background-repeat: no-repeat; background-position: center center;">
+                        style="background-image: url(3.jpeg); background-size: cover;">
                         <div class="workspace ">
                             <div class="content h-100 w-100 mx-auto">
                                 <div class="h-100 w-100 d-flex flex-column justify-content-end align-items-center">
@@ -267,7 +267,7 @@
                                                     <div
                                                         style="border-radius:10rem;overflow:hidden;position:absolute;top:0;right:0;bottom:0;left:0;margin:11%;">
                                                         <img src="1.jpeg"
-                                                            style="width: 100%; height: 100%; object-fit: contain;"
+                                                            style="width: 100%; height: 100%; object-fit: cover;"
                                                             alt="no-image.jpg">
                                                     </div>
                                                 </div>
@@ -292,7 +292,7 @@
                                                     <div
                                                         style="border-radius:10rem;overflow:hidden;position:absolute;top:0;right:0;bottom:0;left:0;margin:11%;">
                                                         <img src="2.jpeg"
-                                                            style="width: 100%; height: 100%; object-fit: contain;"
+                                                            style="width: 100%; height: 100%; object-fit: cover;"
                                                             alt="no-image.jpg">
                                                     </div>
                                                 </div>
@@ -425,7 +425,7 @@
 
                         </div>
                     <li class="container-mobile satumomen_slide"
-                        style="background-image: url(3.jpeg); background-color:#490204; background-size: contain; background-repeat: no-repeat; background-position: center center;">
+                        style="background-image: url(3.jpeg); background-size: cover;">
                         <div class="workspace ">
                             <div class="content h-100 w-100 mx-auto">
                                 <div class="py-4 h-100 d-flex flex-column align-items-center overflow-hidden">
@@ -452,7 +452,8 @@
                                             style="font-size:18px;color:rgb(255,255,255);text-shadow:0 1px 3px rgba(0,0,0,.8);padding-bottom:8px;">
                                             Ucapan &amp; Doa
                                             untuk Mempelai</div>
-                                        <div id="ucapanList" style="max-height:32vh;overflow-y:auto;padding:2px;scrollbar-width:thin;">
+                                        <div id="ucapanList"
+                                            style="max-height:32vh;overflow-y:auto;padding:2px;scrollbar-width:thin;">
                                             <div class="text-center"
                                                 style="color:rgb(255,255,255);text-shadow:0 1px 2px rgba(0,0,0,.8);font-size:13px;">
                                                 Memuat
@@ -544,7 +545,7 @@
                         </div>
                     </li>
                     <li class="container-mobile satumomen_slide"
-                        style="background-image: url(3.jpeg); background-color:#490204; background-size: contain; background-repeat: no-repeat; background-position: center center;">
+                        style="background-image: url(3.jpeg); background-size: cover;">
                         <div class="workspace ">
                             <div class="content h-100 w-100 mx-auto">
                                 <div
@@ -649,7 +650,8 @@
                         <div style="margin-bottom: 10px">
                             <div style="color: #b2b2b2;">Name</div>
                             <div id="qrGuestName">Nama Tamu</div>
-                            <div id="qrGuestDate" style="color:#b2b2b2;font-size:13px;margin-top:4px;">Wednesday, 9 September 2026</div>
+                            <div id="qrGuestDate" style="color:#b2b2b2;font-size:13px;margin-top:4px;">Wednesday, 9
+                                September 2026</div>
                         </div>
                     </div>
                     <button onclick="closeModal(qrModal)" type="button" class="btn btn-close"><svg
@@ -718,8 +720,7 @@
                 <div style="opacity: 0.5"><strong>Music:</strong></div>
                 <div style="opacity: 0.5">Muara - Adera</div>
             </div>
-            <div class="text-center"
-                style="padding:12px 16px;margin-top:8px;border-radius:.75rem;">
+            <div class="text-center" style="padding:12px 16px;margin-top:8px;border-radius:.75rem;">
                 <img src="kirimdigi.ico" alt="KirimDigi"
                     style="width:56px;height:56px;border-radius:50%;object-fit:cover;background:rgba(0,0,0,.25);box-shadow:0 1px 4px rgba(0,0,0,.4);padding:4px;">
                 <div
@@ -814,20 +815,20 @@
     </script>
     <!-- end script -->
     <script>
-        (function () {
-            var hash = window.location.hash;
-            if (!hash || hash.indexOf('#to=') !== 0) return;
-            var guestName = decodeURIComponent(hash.substring(4)).trim();
-            if (!guestName) return;
-            var guestSlot = document.getElementById('guestNameSlot');
-            if (guestSlot) guestSlot.textContent = guestName;
-            var satuMomen = document.getElementById('satuMomen');
-            if (satuMomen) satuMomen.setAttribute('data-guest', guestName);
-            var qrName = document.getElementById('qrGuestName');
-            if (qrName) qrName.textContent = guestName;
-            var rsvpNama = document.getElementById('rsvpNama');
-            if (rsvpNama) rsvpNama.placeholder = guestName;
-        })();
+            (function () {
+                var hash = window.location.hash;
+                if (!hash || hash.indexOf('#to=') !== 0) return;
+                var guestName = decodeURIComponent(hash.substring(4)).trim();
+                if (!guestName) return;
+                var guestSlot = document.getElementById('guestNameSlot');
+                if (guestSlot) guestSlot.textContent = guestName;
+                var satuMomen = document.getElementById('satuMomen');
+                if (satuMomen) satuMomen.setAttribute('data-guest', guestName);
+                var qrName = document.getElementById('qrGuestName');
+                if (qrName) qrName.textContent = guestName;
+                var rsvpNama = document.getElementById('rsvpNama');
+                if (rsvpNama) rsvpNama.placeholder = guestName;
+            })();
     </script>
     <script type="module" src="beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925"
         integrity="sha512-d9sL6GJLXn6fInD1+TVXhTcQOsmxeHfmHAvwGDIxp5TO+uo1fiWW7mHomMj4MLRlCsJDTqXzWLHJFFlPCEIj/A=="
@@ -835,138 +836,138 @@
         crossorigin="anonymous"></script>
     <!-- RSVP ke Google Sheets -->
     <script>
-            (function () {
-                // GANTI "__SCRIPT_URL__" dengan URL Web App Apps Script kamu.
-                var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzizWq1T6o7lqqn0FXAJCRFpSHiKw0zuPe6_UGha-jovGqospkl1Vf0QbJsTeQLToV_7A/exec";
+        (function () {
+            // GANTI "__SCRIPT_URL__" dengan URL Web App Apps Script kamu.
+            var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzizWq1T6o7lqqn0FXAJCRFpSHiKw0zuPe6_UGha-jovGqospkl1Vf0QbJsTeQLToV_7A/exec";
 
-                function initRsvp() {
-                    var form = document.getElementById('rsvpFormSheets');
-                    if (!form) return;
-                    var kehadiran = document.getElementById('rsvpKehadiran');
-                    var tamuBox = document.getElementById('rsvpTamuBox');
-                    var status = document.getElementById('rsvpStatus');
-                    var submit = document.getElementById('rsvpSubmit');
+            function initRsvp() {
+                var form = document.getElementById('rsvpFormSheets');
+                if (!form) return;
+                var kehadiran = document.getElementById('rsvpKehadiran');
+                var tamuBox = document.getElementById('rsvpTamuBox');
+                var status = document.getElementById('rsvpStatus');
+                var submit = document.getElementById('rsvpSubmit');
 
-                    function toggleTamu() {
-                        tamuBox.style.display = (kehadiran.value === 'Hadir') ? 'block' : 'none';
+                function toggleTamu() {
+                    tamuBox.style.display = (kehadiran.value === 'Hadir') ? 'block' : 'none';
+                }
+                kehadiran.addEventListener('change', toggleTamu);
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    status.style.color = '#333';
+                    status.textContent = 'Mengirim...';
+                    submit.disabled = true;
+
+                    var payload = {
+                        nama: document.getElementById('rsvpNama').value.trim(),
+                        kehadiran: kehadiran.value,
+                        jumlahTamu: (kehadiran.value === 'Hadir') ? document.getElementById('rsvpJumlahTamu').value : '0',
+                        ucapan: document.getElementById('rsvpUcapan').value.trim()
+                    };
+
+                    if (!SCRIPT_URL || SCRIPT_URL === '__SCRIPT_URL__') {
+                        status.textContent = 'URL Apps Script belum diatur.';
+                        status.style.color = '#c00';
+                        submit.disabled = false;
+                        return;
                     }
-                    kehadiran.addEventListener('change', toggleTamu);
 
-                    form.addEventListener('submit', function (e) {
-                        e.preventDefault();
-                        status.style.color = '#333';
-                        status.textContent = 'Mengirim...';
-                        submit.disabled = true;
-
-                        var payload = {
-                            nama: document.getElementById('rsvpNama').value.trim(),
-                            kehadiran: kehadiran.value,
-                            jumlahTamu: (kehadiran.value === 'Hadir') ? document.getElementById('rsvpJumlahTamu').value : '0',
-                            ucapan: document.getElementById('rsvpUcapan').value.trim()
-                        };
-
-                        if (!SCRIPT_URL || SCRIPT_URL === '__SCRIPT_URL__') {
-                            status.textContent = 'URL Apps Script belum diatur.';
-                            status.style.color = '#c00';
-                            submit.disabled = false;
-                            return;
-                        }
-
-                        fetch(SCRIPT_URL, {
-                            method: 'POST',
-                            mode: 'no-cors',
-                            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-                            body: JSON.stringify(payload)
-                        }).then(function () {
-                            status.style.color = '#0a0';
-                            status.textContent = 'Terima kasih! Data berhasil dikirim.';
-                            form.reset();
-                            if (tamuBox) tamuBox.style.display = 'none';
-                            setTimeout(loadUcapan, 1500);
-                        }).catch(function () {
-                            status.style.color = '#c00';
-                            status.textContent = 'Gagal mengirim. Coba lagi.';
-                        }).then(function () {
-                            submit.disabled = false;
-                        });
-                    });
-                }
-
-                function escapeHtml(s) {
-                    return (s == null ? '' : String(s))
-                        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-                        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-                }
-
-                function formatWaktu(w) {
-                    if (!w) return '';
-                    var s = String(w).trim().replace(/[/]/g, '-').replace('T', ' ').replace(/\s+/g, ' ');
-                    var d = new Date(s.replace(' ', 'T'));
-                    if (isNaN(d.getTime())) return escapeHtml(w);
-                    var hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'][d.getDay()];
-                    var bulan = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'][d.getMonth()];
-                    function p(n) { return (n < 10 ? '0' : '') + n; }
-                    return hari + ', ' + d.getDate() + ' ' + bulan + ' ' + d.getFullYear() + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
-                }
-
-                function loadUcapan() {
-                    var listEl = document.getElementById('ucapanList');
-                    if (!listEl) return;
-                    if (!SCRIPT_URL || SCRIPT_URL === '__SCRIPT_URL__') return;
-
-                    listEl.innerHTML = '<div class="text-center" style="color:rgb(255,255,255);text-shadow:0 1px 2px rgba(0,0,0,.8);font-size:13px;">Memuat ucapan...</div>';
-
-                    fetch(SCRIPT_URL + '?aksi=ucapan', {
-                        method: 'GET',
-                        cache: 'no-store'
-                    }).then(function (res) {
-                        return res.json();
-                    }).then(function (json) {
-                        var arr = (json && json.data) || [];
-                        if (!arr.length) {
-                            listEl.innerHTML = '<div class="text-center" style="color:rgb(255,255,255);text-shadow:0 1px 2px rgba(0,0,0,.8);font-size:13px;">Belum ada ucapan. Jadilah yang pertama!</div>';
-                            return;
-                        }
-                        var html = '';
-                        arr.forEach(function (item) {
-                            var nama = escapeHtml(item.nama || 'Tamu');
-                            var ucapan = escapeHtml(item.ucapan || '');
-                            var waktu = formatWaktu(item.waktu);
-                            var hadir = (item.kehadiran || '').toString();
-                            var jumlah = item.jumlahTamu || '';
-
-                            var info = '';
-                            var infoColor = '';
-                            if (hadir === 'Hadir') {
-                                info = 'Hadir' + (jumlah && jumlah !== '0' ? ' · ' + escapeHtml(jumlah) + ' orang' : '');
-                                infoColor = 'rgb(0,140,60)';
-                            } else if (hadir === 'Tidak Hadir') {
-                                info = 'Tidak Hadir';
-                                infoColor = 'rgb(200,0,0)';
-                            }
-
-                            html += '<div style="background:rgba(255,255,255,0.85);border-radius:.75rem;padding:10px 12px;margin-bottom:10px;">' +
-                                '<div style="display:flex;justify-content:space-between;align-items:center;">' +
-                                '<div style="font-weight:700;color:rgb(20,20,20);font-size:13px;">' + nama + '</div>' +
-                                '<div style="font-size:11px;color:rgb(90,90,90);white-space:nowrap;margin-left:8px;">' + waktu + '</div>' +
-                                '</div>' +
-                                (info ? '<div style="font-size:11px;color:' + infoColor + ';font-weight:700;margin-top:2px;">' + info + '</div>' : '') +
-                                '<div style="color:rgb(60,60,60);font-size:13px;margin-top:4px;white-space:pre-wrap;word-break:break-word;">' + ucapan + '</div>' +
-                                '</div>';
-                        });
-                        listEl.innerHTML = html;
+                    fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                        body: JSON.stringify(payload)
+                    }).then(function () {
+                        status.style.color = '#0a0';
+                        status.textContent = 'Terima kasih! Data berhasil dikirim.';
+                        form.reset();
+                        if (tamuBox) tamuBox.style.display = 'none';
+                        setTimeout(loadUcapan, 1500);
                     }).catch(function () {
-                        listEl.innerHTML = '<div class="text-center" style="color:rgb(255,255,255);text-shadow:0 1px 2px rgba(0,0,0,.8);font-size:13px;">Gagal memuat ucapan.</div>';
+                        status.style.color = '#c00';
+                        status.textContent = 'Gagal mengirim. Coba lagi.';
+                    }).then(function () {
+                        submit.disabled = false;
                     });
-                }
+                });
+            }
 
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', function () { initRsvp(); loadUcapan(); });
-                } else {
-                    initRsvp();
-                    loadUcapan();
-                }
-            })();
+            function escapeHtml(s) {
+                return (s == null ? '' : String(s))
+                    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+            }
+
+            function formatWaktu(w) {
+                if (!w) return '';
+                var s = String(w).trim().replace(/[/]/g, '-').replace('T', ' ').replace(/\s+/g, ' ');
+                var d = new Date(s.replace(' ', 'T'));
+                if (isNaN(d.getTime())) return escapeHtml(w);
+                var hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'][d.getDay()];
+                var bulan = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'][d.getMonth()];
+                function p(n) { return (n < 10 ? '0' : '') + n; }
+                return hari + ', ' + d.getDate() + ' ' + bulan + ' ' + d.getFullYear() + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+            }
+
+            function loadUcapan() {
+                var listEl = document.getElementById('ucapanList');
+                if (!listEl) return;
+                if (!SCRIPT_URL || SCRIPT_URL === '__SCRIPT_URL__') return;
+
+                listEl.innerHTML = '<div class="text-center" style="color:rgb(255,255,255);text-shadow:0 1px 2px rgba(0,0,0,.8);font-size:13px;">Memuat ucapan...</div>';
+
+                fetch(SCRIPT_URL + '?aksi=ucapan', {
+                    method: 'GET',
+                    cache: 'no-store'
+                }).then(function (res) {
+                    return res.json();
+                }).then(function (json) {
+                    var arr = (json && json.data) || [];
+                    if (!arr.length) {
+                        listEl.innerHTML = '<div class="text-center" style="color:rgb(255,255,255);text-shadow:0 1px 2px rgba(0,0,0,.8);font-size:13px;">Belum ada ucapan. Jadilah yang pertama!</div>';
+                        return;
+                    }
+                    var html = '';
+                    arr.forEach(function (item) {
+                        var nama = escapeHtml(item.nama || 'Tamu');
+                        var ucapan = escapeHtml(item.ucapan || '');
+                        var waktu = formatWaktu(item.waktu);
+                        var hadir = (item.kehadiran || '').toString();
+                        var jumlah = item.jumlahTamu || '';
+
+                        var info = '';
+                        var infoColor = '';
+                        if (hadir === 'Hadir') {
+                            info = 'Hadir' + (jumlah && jumlah !== '0' ? ' · ' + escapeHtml(jumlah) + ' orang' : '');
+                            infoColor = 'rgb(0,140,60)';
+                        } else if (hadir === 'Tidak Hadir') {
+                            info = 'Tidak Hadir';
+                            infoColor = 'rgb(200,0,0)';
+                        }
+
+                        html += '<div style="background:rgba(255,255,255,0.85);border-radius:.75rem;padding:10px 12px;margin-bottom:10px;">' +
+                            '<div style="display:flex;justify-content:space-between;align-items:center;">' +
+                            '<div style="font-weight:700;color:rgb(20,20,20);font-size:13px;">' + nama + '</div>' +
+                            '<div style="font-size:11px;color:rgb(90,90,90);white-space:nowrap;margin-left:8px;">' + waktu + '</div>' +
+                            '</div>' +
+                            (info ? '<div style="font-size:11px;color:' + infoColor + ';font-weight:700;margin-top:2px;">' + info + '</div>' : '') +
+                            '<div style="color:rgb(60,60,60);font-size:13px;margin-top:4px;white-space:pre-wrap;word-break:break-word;">' + ucapan + '</div>' +
+                            '</div>';
+                    });
+                    listEl.innerHTML = html;
+                }).catch(function () {
+                    listEl.innerHTML = '<div class="text-center" style="color:rgb(255,255,255);text-shadow:0 1px 2px rgba(0,0,0,.8);font-size:13px;">Gagal memuat ucapan.</div>';
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function () { initRsvp(); loadUcapan(); });
+            } else {
+                initRsvp();
+                loadUcapan();
+            }
+        })();
     </script>
     <!-- end RSVP -->
 </body>
